@@ -91,7 +91,7 @@ void sendnotif(var name, var bodymessage, var sendto) async {
     final headers = {
       'content-type': 'application/json',
       'Authorization':
-          'key=AAAAl_CVwSI:APA91bFev7PwCrKdJM67INvCj2SbHeuIF04jPqIGIeF37Nlve0-pCdgK_M9Tw5pguJaTYMn-N1P_ZUIwspdteUOS5Sarvw2V1wKjtm9uWupXKCuBatnOYWAnwncQDz0ivkj4gnlj-obo'
+//           'key="KEY"'
     };
 
     final response = await http.post(Uri.parse(encoded),
