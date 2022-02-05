@@ -790,15 +790,7 @@ class _TeacherHomeState extends State<TeacherHome>
               setState(() {
                 _currentIndex = value;
               });
-              /*if (value == 0) {
-                setState(() {
-                  showTabs = true;
-                });
-              } else {
-                setState(() {
-                  showTabs = false;
-                });
-              }*/
+              
             },
             children: [
               TeacherHomePage(teacherMap: widget.teacherMap),

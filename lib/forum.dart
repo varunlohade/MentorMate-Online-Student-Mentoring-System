@@ -107,13 +107,13 @@ class _FormDartState extends State<FormDart> {
                 
                 onTap: () {
                   print("this is searchaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
-                  // Navigator.push(
-                  //     context,
-                  //     MaterialPageRoute(
-                  //         builder: (_) => Search(
-                  //               search: _searchController.text,
-                  //               teacherMap: widget.teacherMap,
-                  //             )));
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (_) => Search(
+                                search: _searchController.text,
+                                teacherMap: widget.teacherMap,
+                              )));
                 }),
             SizedBox(
               height: 20,
@@ -122,7 +122,6 @@ class _FormDartState extends State<FormDart> {
               stream: FirebaseFirestore.instance
                   .collection('Forum')
                   .where("title", isGreaterThanOrEqualTo: _searchController.text)
-                  
                   .snapshots(),
               builder: (ctx, AsyncSnapshot<QuerySnapshot> usersnapshot) {
                 if (usersnapshot.connectionState == ConnectionState.waiting) {
